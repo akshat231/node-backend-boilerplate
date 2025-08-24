@@ -167,7 +167,7 @@ node-backend-boilerplate init my-backend
 ```
 
 3. This will create a folder my-backend/ with the following structure:
-\`\`\`
+```
 my-backend/
 │── src  
     │── index.js              # App entrypoint
@@ -180,7 +180,7 @@ my-backend/
 │── package.json          # Dependencies
 │── config/               # Environment configs
 │── README.md
-\`\`\`
+```
 4.  Start Your Server
 ```bash
 npm start
