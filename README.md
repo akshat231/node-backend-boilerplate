@@ -1,13 +1,52 @@
 # 🚀 Node.js Backend Boilerplate
 
-A clean and scalable **Node.js backend starter template** with built-in logging, configuration management, error handling, and database support.
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-green?logo=node.js)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express.js-Backend-lightgrey?logo=express)](https://expressjs.com/)
+[![Postgres](https://img.shields.io/badge/Postgres-Supported-blue?logo=postgresql)](https://www.postgresql.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Supported-green?logo=mongodb)](https://www.mongodb.com/)
 
-![Node.js](https://img.shields.io/badge/Node.js-18.x-green?logo=node.js)
-![Express](https://img.shields.io/badge/Express.js-Backend-lightgrey?logo=express)
-![Postgres](https://img.shields.io/badge/Postgres-Supported-blue?logo=postgresql)
-![MongoDB](https://img.shields.io/badge/MongoDB-Supported-green?logo=mongodb)
+A clean and scalable **Node.js backend starter template** with built-in logging, configuration management, error handling, and optional database support.
 
 ---
+
+## ⚡ Quick Start (CLI)
+
+Generate a new backend project instantly:
+
+```bash
+# Using npm globally
+npm install -g create-my-node-backend
+
+# Or directly with npx
+npx create-my-node-backend my-backend
+```
+
+This will create a folder my-backend/ with the full backend structure:
+
+```
+my-backend/
+│── src/
+│   ├── index.js
+│   ├── middlewares/
+│   ├── routes/
+│   ├── utilities/
+│   ├── services/
+│   ├── repositories/
+│   └── databases/
+│── package.json
+│── config/
+│── README.md
+
+
+```
+
+Start your server
+
+```bash
+cd my-backend
+npm start
+```
+
 
 ## 📂 Features
 
@@ -19,108 +58,34 @@ A clean and scalable **Node.js backend starter template** with built-in logging,
 ✅ Error handling middleware  
 ✅ Postgres & MongoDB ready (optional)
 
----
 
-## 📂 Folder Structure
-
-```
-project-root/
-│── index.js              # App entrypoint
-│── package.json
-│── config/               # Environment configs
-│── middlewares/          # Custom middlewares
-│── routes/               # API routes
-│── utilities/            # Logger, startup, helpers
-│── services/             # Database & external services
-│── README.md
-```
-
----
-
-## ⚡ Installation
+## 🛠️ Scripts
 
 ```bash
-# Clone the repository
-git clone https://github.com/<your-username>/node-backend-boilerplate.git
-cd node-backend-boilerplate
-
-# Install dependencies
-npm install
-```
-
----
-
-## 🛠️ Available Scripts
-
-```bash
-# Start the server
+# Start server
 npm start
 
-# Run in development mode (with nodemon)
+# Start in development mode
 npm run start
 ```
 
----
-
 ## ⚙️ Configuration
 
-This project uses [`node-config`](https://www.npmjs.com/package/config).  
-Default config is in `config/default.json`:
+Default config: config/default.json
 
-```json
+```bash
 {
-  "server": {
-    "port": 4000
-  },
+  "server": { "port": 4000 },
   "database": {
-    "postgres": {
-      "enabled": false,
-      "url": "postgres://user:password@localhost:5432/dbname"
-    },
-    "mongo": {
-      "enabled": false,
-      "url": "mongodb://localhost:27017/dbname"
-    }
+    "postgres": { "enabled": false, "url": "postgres://user:password@localhost:5432/dbname" },
+    "mongo": { "enabled": false, "url": "mongodb://localhost:27017/dbname" }
   }
 }
 ```
 
-To override configs, create `config/development.json` or `config/production.json`.
+## 🔍 Example API Route
 
----
-
-## 🔍 Health Check
-
-Check if a given **port & host** is reachable:
-
-```js
-const getHealth = async (port, host) => {
-    try {
-        const getHealth = await pingPort(host, port);
-        if (!getHealth) {
-            return { message: 'Port is not working', data: getHealth };
-        }
-         return { message: 'Port is working', data: getHealth };
-    } catch (error) {
-        throw error;
-    }
-};
-```
-
-✅ Response example:
-
-```json
-{
-  "message": "Port is working",
-  "data": true
-}
-```
-
----
-
-## 🧩 Example API Route
-
-```js
+```bash
 const express = require('express');
 const router = express.Router();
 
@@ -130,8 +95,15 @@ router.get('/health', (req, res) => {
 
 module.exports = router;
 ```
+## 📦 GitHub Repo (For Contributors)
 
----
+Clone the repository for contributing or advanced usage:
+
+```bash
+git clone https://github.com/akshat231/node-backend-boilerplate
+cd node-backend-boilerplate
+npm install
+```
 
 ## 🚀 Roadmap
 
@@ -147,48 +119,13 @@ module.exports = router;
 Contributions are welcome!  
 Fork the repo, create a branch, and submit a PR 🚀
 
----
-
-
-## ⚡ Generate Your Backend Boilerplate
-
-This project comes with a **CLI script** to quickly generate a ready-to-use Node.js backend boilerplate with all the core structure, middleware, logging, and optional database setup.  
-
-### Usage
-
-1. Install the CLI globally and run generator function
-```bash
-# Using npm
-npm install -g create-my-node-backend
-
-# using npx to generate backend
-npx create-my-node-backend my-backend
-
-```
-2. This will create a folder my-backend/ with the following structure:
-```
-my-backend/
-│── src  
-    │── index.js              # App entrypoint
-    │── middlewares/          # Custom middlewares
-    │── routes/               # API routes
-    │── utilities/            # Logger, startup, helpers
-    │── services/             # Service Logic   
-    │── repositories/         # Databse Queries
-    │── databases/            # Databases config and connections
-│── package.json          # Dependencies
-│── config/               # Environment configs
-│── README.md
-```
-3.  Start Your Server
-```bash
-npm start
-```
-
-
-
-
 
 ## 📜 License
 
 MIT License © 2025 [Akshat Sharma](https://github.com/akshat231)
+
+---
+
+
+
+
