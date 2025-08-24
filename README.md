@@ -57,7 +57,7 @@ npm install
 npm start
 
 # Run in development mode (with nodemon)
-npm run dev
+npm run start
 ```
 
 ---
@@ -94,12 +94,17 @@ To override configs, create `config/development.json` or `config/production.json
 Check if a given **port & host** is reachable:
 
 ```js
-const { getHealth } = require('./utilities/health');
-
-(async () => {
-  const result = await getHealth(4000, '127.0.0.1');
-  console.log(result);
-})();
+const getHealth = async (port, host) => {
+    try {
+        const getHealth = await pingPort(host, port);
+        if (!getHealth) {
+            return { message: 'Port is not working', data: getHealth };
+        }
+         return { message: 'Port is working', data: getHealth };
+    } catch (error) {
+        throw error;
+    }
+};
 ```
 
 ✅ Response example:
@@ -119,7 +124,7 @@ const { getHealth } = require('./utilities/health');
 const express = require('express');
 const router = express.Router();
 
-router.get('/ping', (req, res) => {
+router.get('/health', (req, res) => {
   res.json({ message: 'pong 🏓' });
 });
 
@@ -146,4 +151,4 @@ Fork the repo, create a branch, and submit a PR 🚀
 
 ## 📜 License
 
-MIT License © 2025 [Your Name](https://github.com/<your-username>)
+MIT License © 2025 [Akshat Sharma](https://github.com/akshat231)
