@@ -156,17 +156,16 @@ This project comes with a **CLI script** to quickly generate a ready-to-use Node
 
 ### Usage
 
-1. Install the CLI globally
+1. Install the CLI globally and run generator function
 ```bash
-npm install -g node-backend-boilerplate-cli
-```
+# Using npm
+npm install -g create-my-node-backend
 
-2. Run the generator in the folder where you want the backend:
-```bash
-node-backend-boilerplate init my-backend
-```
+# using npx to generate backend
+npx create-my-node-backend my-backend
 
-3. This will create a folder my-backend/ with the following structure:
+```
+2. This will create a folder my-backend/ with the following structure:
 ```
 my-backend/
 │── src  
@@ -181,7 +180,7 @@ my-backend/
 │── config/               # Environment configs
 │── README.md
 ```
-4.  Start Your Server
+3.  Start Your Server
 ```bash
 npm start
 ```

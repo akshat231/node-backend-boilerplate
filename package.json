@@ -1,6 +1,6 @@
 {
-  "name": "create-my-backend",
-  "version": "1.0.0",
+  "name": "create-my-node-backend",
+  "version": "1.0.1",
   "description": "CLI tool to generate backend boilerplate projects",
   "bin": {
     "create-my-backend": "index.js"
@@ -10,7 +10,16 @@
     "index.js",
     "boilerplate"
   ],
-  "keywords": ["cli", "boilerplate", "backend"],
-  "author": "Your Name",
-  "license": "MIT"
+  "keywords": [
+    "cli",
+    "boilerplate",
+    "backend"
+  ],
+  "author": "Akshat Sharma",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshat231/node-backend-boilerplate.git"
+  },
+  "homepage": "https://github.com/akshat231/node-backend-boilerplate#readme"
 }
