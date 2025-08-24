@@ -1,11 +1,16 @@
 {
   "name": "create-my-backend",
   "version": "1.0.0",
+  "description": "CLI tool to generate backend boilerplate projects",
   "bin": {
     "create-my-backend": "index.js"
   },
+  "preferGlobal": true,
   "files": [
     "index.js",
     "boilerplate"
-  ]
+  ],
+  "keywords": ["cli", "boilerplate", "backend"],
+  "author": "Your Name",
+  "license": "MIT"
 }
