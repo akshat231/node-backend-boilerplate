@@ -1,0 +1,18 @@
+{
+  "instanceType": "development",
+  "server": {
+    "host": "localhost",
+    "port": 5000,
+    "corsWhiteList": ["localhost"]
+  },
+  "database": {
+    "mongo": {
+      "url": "mongo-url",
+      "username": "username",
+      "password": "password",
+      "collections": {
+        "users": "userscollection-name"
+      }
+    }
+  }
+}

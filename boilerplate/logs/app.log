@@ -1,0 +1,22 @@
+2025-08-24T17:35:07.741Z [INFO]: Starting App
+2025-08-24T17:35:07.743Z [INFO]: Initializing services
+2025-08-24T17:35:07.743Z [INFO]: BoilerPlate Initialized
+2025-08-24T17:35:07.747Z [INFO]: Server running on port 5000
+2025-08-24T19:14:30.912Z [INFO]: MongoDB connection closed
+2025-08-24T19:14:43.046Z [INFO]: Starting App
+2025-08-24T19:14:43.050Z [INFO]: Initializing services
+2025-08-24T19:14:43.050Z [INFO]: BoilerPlate Initialized
+2025-08-24T19:14:43.057Z [INFO]: Server running on port 5000
+2025-08-24T19:16:51.741Z [ERROR]: Validation error: "port" is required
+2025-08-24T19:18:58.241Z [ERROR]: Validation error: "host" is not allowed
+2025-08-24T19:19:06.750Z [INFO]: MongoDB connection closed
+2025-08-24T19:19:11.103Z [INFO]: Starting App
+2025-08-24T19:19:11.106Z [INFO]: Initializing services
+2025-08-24T19:19:11.107Z [INFO]: BoilerPlate Initialized
+2025-08-24T19:19:11.113Z [INFO]: Server running on port 5000
+2025-08-24T19:23:15.055Z [INFO]: MongoDB connection closed
+2025-08-24T19:23:29.826Z [INFO]: Starting App
+2025-08-24T19:23:29.827Z [INFO]: Initializing services
+2025-08-24T19:23:29.828Z [INFO]: BoilerPlate Initialized
+2025-08-24T19:23:29.830Z [INFO]: Server running on port 5000
+2025-08-24T19:24:07.258Z [INFO]: MongoDB connection closed

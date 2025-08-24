@@ -1,0 +1,11 @@
+{
+  "name": "create-my-backend",
+  "version": "1.0.0",
+  "bin": {
+    "create-my-backend": "index.js"
+  },
+  "files": [
+    "index.js",
+    "boilerplate"
+  ]
+}
