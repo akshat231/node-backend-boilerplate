@@ -149,6 +149,47 @@ Fork the repo, create a branch, and submit a PR 🚀
 
 ---
 
+
+## ⚡ Generate Your Backend Boilerplate
+
+This project comes with a **CLI script** to quickly generate a ready-to-use Node.js backend boilerplate with all the core structure, middleware, logging, and optional database setup.  
+
+### Usage
+
+1. Install the CLI globally
+```bash
+npm install -g node-backend-boilerplate-cli
+```
+
+2. Run the generator in the folder where you want the backend:
+```bash
+node-backend-boilerplate init my-backend
+```
+
+3. This will create a folder my-backend/ with the following structure:
+\`\`\`
+my-backend/
+│── src  
+    │── index.js              # App entrypoint
+    │── middlewares/          # Custom middlewares
+    │── routes/               # API routes
+    │── utilities/            # Logger, startup, helpers
+    │── services/             # Service Logic   
+    │── repositories/         # Databse Queries
+    │── databases/            # Databases config and connections
+│── package.json          # Dependencies
+│── config/               # Environment configs
+│── README.md
+\`\`\`
+4.  Start Your Server
+```bash
+npm start
+```
+
+
+
+
+
 ## 📜 License
 
 MIT License © 2025 [Akshat Sharma](https://github.com/akshat231)
