@@ -11,7 +11,8 @@ const createApp = async () => {
   const { app } = await initializeServices({
     mongo: false,
     postgres: false,
-    redis: false
+    redis: false,
+    kafka: false
   })
   app.use(middleware.router);
   app.use('/api', apiRouter);

@@ -49,3 +49,37 @@
 2025-10-01T11:02:11.358Z [INFO]: BoilerPlate Initialized
 2025-10-01T11:02:11.361Z [INFO]: Server running on port 5000
 2025-10-01T11:02:13.674Z [INFO]: MongoDB connection closed
+2025-10-01T18:36:28.147Z [INFO]: Starting App
+2025-10-01T18:36:28.148Z [INFO]: Initializing services
+2025-10-01T18:36:28.148Z [INFO]: BoilerPlate Initialized
+2025-10-01T18:36:28.151Z [INFO]: Server running on port 5000
+2025-10-01T18:36:30.993Z [INFO]: MongoDB connection closed
+2025-10-01T18:36:57.584Z [INFO]: Starting App
+2025-10-01T18:36:57.585Z [INFO]: Initializing services
+2025-10-01T18:36:57.585Z [INFO]: Initializing Kafka service
+2025-10-01T18:36:59.547Z [INFO]: MongoDB connection closed
+2025-10-01T18:38:49.985Z [INFO]: Starting App
+2025-10-01T18:38:49.986Z [INFO]: Initializing services
+2025-10-01T18:38:49.986Z [INFO]: Initializing Kafka service
+2025-10-01T18:38:50.005Z [INFO]: Kafka producer (documentAnalyzer) connected
+2025-10-01T18:38:50.005Z [INFO]: Kafka producers initialized
+2025-10-01T18:38:50.008Z [INFO]: Kafka consumer (healthConsumer) connected
+2025-10-01T18:44:19.176Z [INFO]: Starting App
+2025-10-01T18:44:19.177Z [INFO]: Initializing services
+2025-10-01T18:44:19.177Z [INFO]: Initializing Kafka service
+2025-10-01T18:44:19.194Z [INFO]: Kafka producer (documentAnalyzer) connected
+2025-10-01T18:44:19.194Z [INFO]: Kafka producers initialized
+2025-10-01T18:44:19.196Z [INFO]: Kafka consumer (healthConsumer) connected
+2025-10-01T18:44:19.215Z [ERROR]: Failed to initialize Kafka healthConsumer: This server does not host this topic-partition
+2025-10-01T18:46:14.701Z [INFO]: Starting App
+2025-10-01T18:46:14.702Z [INFO]: Initializing services
+2025-10-01T18:46:14.702Z [INFO]: Initializing Kafka service
+2025-10-01T18:46:14.719Z [INFO]: Kafka producer (documentAnalyzer) connected
+2025-10-01T18:46:14.719Z [INFO]: Kafka producers initialized
+2025-10-01T18:46:14.722Z [INFO]: Kafka consumer (healthConsumer) connected
+2025-10-01T18:46:14.727Z [INFO]: Subscribed to Kafka topic "health-topic"
+2025-10-01T18:46:14.728Z [INFO]: Kafka consumers initialized
+2025-10-01T18:46:14.728Z [INFO]: All Kafka producers and consumers initialized successfully
+2025-10-01T18:46:14.728Z [INFO]: BoilerPlate Initialized
+2025-10-01T18:46:14.730Z [INFO]: Server running on port 5000
+2025-10-01T18:46:17.319Z [INFO]: MongoDB connection closed
