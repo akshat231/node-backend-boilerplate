@@ -1,6 +1,7 @@
 const logger = require('./logger');
 const { initializeMongo } = require('../databases/mongo/startup');
 const { initPostgres } = require('../databases/postgres/startup')
+const { initRedis } = require('../databases/redis/startup')
 const app = require('express')();
 
 const initializeServices = async (options) => {
@@ -15,6 +16,12 @@ const initializeServices = async (options) => {
         logger.info('Initializing Postgres service');
         await initPostgres();
     }
+
+    if (options && options.redis) {
+        logger.info('Initializing Redis service');
+        await initRedis();
+    }
+
 
     response.app = app;
     logger.info('BoilerPlate Initialized')

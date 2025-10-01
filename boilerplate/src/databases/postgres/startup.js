@@ -1,15 +1,16 @@
 const { Pool } = require("pg");
 const logger = require("../../utilities/logger");
+const postgresConfig = require('config').get('database.postgres')
 
 // Read env variables or config
 const {
-  PG_HOST = "localhost",
-  PG_PORT = 5432,
-  PG_USER = "postgres",
-  PG_PASSWORD = "postgres",
-  PG_DATABASE = "mydb",
-  PG_SSL = "false",
-} = process.env;
+  PG_HOST = postgresConfig.host,
+  PG_PORT = postgresConfig.port,
+  PG_USER = postgresConfig.user,
+  PG_PASSWORD = "",
+  PG_DATABASE = postgresConfig.database,
+  PG_SSL = postgresConfig.ssl,
+} = postgresConfig;
 
 let pool;
 

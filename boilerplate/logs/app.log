@@ -20,3 +20,32 @@
 2025-08-24T19:23:29.828Z [INFO]: BoilerPlate Initialized
 2025-08-24T19:23:29.830Z [INFO]: Server running on port 5000
 2025-08-24T19:24:07.258Z [INFO]: MongoDB connection closed
+2025-10-01T10:58:01.263Z [INFO]: Starting App
+2025-10-01T10:58:01.265Z [INFO]: Initializing services
+2025-10-01T10:58:01.265Z [INFO]: Initializing Postgres service
+2025-10-01T10:58:01.265Z [INFO]: ⏳ Initializing PostgreSQL connection...
+2025-10-01T10:58:01.285Z [ERROR]: ❌ PostgreSQL connection failed database "mydb" does not exist
+2025-10-01T10:59:54.087Z [INFO]: Starting App
+2025-10-01T10:59:54.089Z [INFO]: Initializing services
+2025-10-01T10:59:54.089Z [INFO]: Initializing Postgres service
+2025-10-01T10:59:54.089Z [INFO]: ⏳ Initializing PostgreSQL connection...
+2025-10-01T10:59:54.115Z [INFO]: ✅ Connected to PostgreSQL successfully
+2025-10-01T10:59:54.115Z [INFO]: Initializing Redis service
+2025-10-01T10:59:54.116Z [INFO]: ⏳ Initializing Redis client...
+2025-10-01T10:59:54.154Z [ERROR]: Redis Client Error:
+2025-10-01T10:59:54.369Z [ERROR]: Redis Client Error:
+2025-10-01T10:59:54.638Z [ERROR]: Redis Client Error:
+2025-10-01T10:59:55.030Z [ERROR]: Redis Client Error:
+2025-10-01T10:59:55.590Z [ERROR]: Redis Client Error:
+2025-10-01T10:59:56.096Z [INFO]: MongoDB connection closed
+2025-10-01T11:02:11.282Z [INFO]: Starting App
+2025-10-01T11:02:11.284Z [INFO]: Initializing services
+2025-10-01T11:02:11.284Z [INFO]: Initializing Postgres service
+2025-10-01T11:02:11.284Z [INFO]: ⏳ Initializing PostgreSQL connection...
+2025-10-01T11:02:11.305Z [INFO]: ✅ Connected to PostgreSQL successfully
+2025-10-01T11:02:11.305Z [INFO]: Initializing Redis service
+2025-10-01T11:02:11.305Z [INFO]: ⏳ Initializing Redis client...
+2025-10-01T11:02:11.358Z [INFO]: Connected to Redis at localhost:6379
+2025-10-01T11:02:11.358Z [INFO]: BoilerPlate Initialized
+2025-10-01T11:02:11.361Z [INFO]: Server running on port 5000
+2025-10-01T11:02:13.674Z [INFO]: MongoDB connection closed
