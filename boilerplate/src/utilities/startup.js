@@ -12,7 +12,7 @@ const initializeServices = async (options) => {
     }
 
     if (options && options.postgres) {
-        logger.info('Initializing MongoDB service');
+        logger.info('Initializing Postgres service');
         await initPostgres();
     }
 
