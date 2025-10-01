@@ -13,6 +13,17 @@
       "collections": {
         "users": "userscollection-name"
       }
+    },
+    "postgres": {
+      "host": "localhost",
+      "port": 5432,
+      "user": "postgres",
+      "database": "scholar_snap",
+      "ssl": false
+    },
+    "redis": {
+      "host": "localhost",
+      "port": 6379
     }
   }
 }

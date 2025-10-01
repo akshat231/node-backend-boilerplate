@@ -10,7 +10,8 @@ const createApp = async () => {
   logger.info('Starting App');
   const { app } = await initializeServices({
     mongo: false,
-    postgres: false
+    postgres: false,
+    redis: false
   })
   app.use(middleware.router);
   app.use('/api', apiRouter);
