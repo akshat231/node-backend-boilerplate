@@ -56,7 +56,7 @@ npm start
 ✅ Health check (ping a port)  
 ✅ Custom middleware support  
 ✅ Error handling middleware  
-✅ Postgres & MongoDB ready (optional)
+✅ Postgres, MongoDB, Redis, Kafka ready (optional)
 
 
 ## 🛠️ Scripts
@@ -78,9 +78,20 @@ Default config: config/default.json
   "server": { "port": 4000 },
   "database": {
     "postgres": { "enabled": false, "url": "postgres://user:password@localhost:5432/dbname" },
-    "mongo": { "enabled": false, "url": "mongodb://localhost:27017/dbname" }
+    "mongo": { "enabled": false, "url": "mongodb://localhost:27017/dbname" },
+    "redis": { "host": "localhost", "port": 6379 } 
+    },
+    "kafka": {
+    "clientId": "app_name",
+    "brokers": ["localhost:9092"],
+    "topics": {
+      "health": "health-topic"
+    },
+    "groupIds": {
+      "healh": "health-group"
+    }
   }
-}
+  }
 ```
 
 ## 🔍 Example API Route
