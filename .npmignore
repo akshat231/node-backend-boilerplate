@@ -1,1 +1,8 @@
-boilerplate/node_modules
+# Safety net: the `files` whitelist in package.json is the primary
+# publish control (explicit boilerplate subpaths, NOT the whole
+# `boilerplate` dir — otherwise nested node_modules gets published).
+# These patterns guard the case where `files` is ever removed.
+node_modules/
+boilerplate/node_modules/
+*.log
+boilerplate/logs/
