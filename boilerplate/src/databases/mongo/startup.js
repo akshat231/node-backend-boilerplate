@@ -10,7 +10,7 @@ const connectionOptions = {
 
 if (config.get("username") && config.get("password")) {
   connectionOptions.auth = {
-    user: config.get("username"),
+    username: config.get("username"),
     password: config.get("password"),
   };
 }

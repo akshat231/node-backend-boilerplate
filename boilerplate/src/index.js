@@ -1,5 +1,4 @@
 const logger = require('./utilities/logger');
-const bodyParser = require('body-parser');
 const config = require('config').get('server');
 const { initializeServices } = require('./utilities/startup');
 const middleware = require('./middlewares');

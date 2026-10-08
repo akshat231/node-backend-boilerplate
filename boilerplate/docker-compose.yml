@@ -1,0 +1,30 @@
+# Usage:
+#   docker compose up --build
+#
+# The app reads its port/host from config/default.json
+# (server.port, default 5000) — NOT from .env. To change it in Docker
+# without editing files, override via NODE_CONFIG, e.g.:
+#   NODE_CONFIG='{"server":{"port":5000}}'
+#
+# Databases (postgres, mongo, redis, kafka) are NOT started here —
+# bring your own and point the app at them via config/default.json
+# or environment variables (PG_HOST, PG_PORT, PG_USER, PG_PASSWORD,
+# PG_DATABASE, PG_SSL, REDIS_HOST, REDIS_PORT).
+
+services:
+  app:
+    build: .
+    container_name: node-backend-app
+    ports:
+      - "${PORT:-5000}:5000"
+    environment:
+      - NODE_ENV=production
+      # Example override (node-config): uncomment to change the port without editing files.
+      # - NODE_CONFIG={"server":{"port":5000}}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:5000/api/health?port=5000&host=localhost"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s

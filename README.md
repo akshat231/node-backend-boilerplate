@@ -27,16 +27,18 @@ This will create a folder my-backend/ with the full backend structure:
 my-backend/
 │── src/
 │   ├── index.js
+│   ├── controllers/
 │   ├── middlewares/
 │   ├── routes/
 │   ├── utilities/
 │   ├── services/
 │   ├── repositories/
+│   ├── validators/
 │   └── databases/
-│── package.json
 │── config/
-│── README.md
-
+│── package.json
+│── Dockerfile
+│── docker-compose.yml
 
 ```
 
@@ -64,34 +66,66 @@ npm start
 ```bash
 # Start server
 npm start
-
-# Start in development mode
-npm run start
 ```
+
+## 🐳 Docker
+
+Generated projects ship with a `Dockerfile` and `docker-compose.yml`:
+
+```bash
+cd my-backend
+docker compose up --build
+```
+
+> Note: the app reads its port from `config/default.json` (`server.port`,
+> default 5000), not from `.env`. Databases are not included in compose —
+> run your own and point the app at them via `config/default.json` or
+> env vars (`PG_HOST`, `REDIS_HOST`, …).
 
 ## ⚙️ Configuration
 
 Default config: config/default.json
 
-```bash
+```json
 {
-  "server": { "port": 4000 },
+  "instanceType": "development",
+  "server": {
+    "host": "localhost",
+    "port": 5000,
+    "corsWhiteList": ["localhost"]
+  },
   "database": {
-    "postgres": { "enabled": false, "url": "postgres://user:password@localhost:5432/dbname" },
-    "mongo": { "enabled": false, "url": "mongodb://localhost:27017/dbname" },
-    "redis": { "host": "localhost", "port": 6379 } 
+    "mongo": {
+      "url": "mongo-url",
+      "username": "username",
+      "password": "password",
+      "collections": {
+        "users": "userscollection-name"
+      }
     },
-    "kafka": {
+    "postgres": {
+      "host": "localhost",
+      "port": 5432,
+      "user": "postgres",
+      "database": "scholar_snap",
+      "ssl": false
+    },
+    "redis": {
+      "host": "localhost",
+      "port": 6379
+    }
+  },
+  "kafka": {
     "clientId": "app_name",
     "brokers": ["localhost:9092"],
     "topics": {
       "health": "health-topic"
     },
     "groupIds": {
-      "healh": "health-group"
+      "health": "health-group"
     }
   }
-  }
+}
 ```
 
 ## 🔍 Example API Route
@@ -116,12 +150,7 @@ cd node-backend-boilerplate
 npm install
 ```
 
-## 🚀 Roadmap
 
-- [ ] Add JWT authentication  
-- [ ] Add role-based access control  
-- [ ] Add Docker support  
-- [ ] Add testing (Jest / Mocha)
 
 ---
 
