@@ -2,11 +2,9 @@ const { createClient } = require('redis');
 const logger = require('../../utilities/logger');
 const redisConfig = require('config').get('database.redis')
 
-// Read only host and port from environment
-const {
-  REDIS_HOST = 'localhost',
-  REDIS_PORT = 6379,
-} = redisConfig
+// Environment variables take precedence, config file is the fallback.
+const REDIS_HOST = process.env.REDIS_HOST || redisConfig.host || 'localhost';
+const REDIS_PORT = parseInt(process.env.REDIS_PORT || redisConfig.port || 6379, 10);
 
 let redisClient;
 

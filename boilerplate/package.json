@@ -2,7 +2,10 @@
   "name": "boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node src/index.js"
   },
@@ -22,7 +25,6 @@
     "kafkajs": "^2.2.4",
     "mongoose": "^8.18.0",
     "morgan": "^1.10.1",
-    "net": "^1.0.2",
     "pg": "^8.16.3",
     "redis": "^5.8.2",
     "winston": "^3.17.0"

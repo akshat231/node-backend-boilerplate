@@ -7,9 +7,9 @@
   },
   "database": {
     "mongo": {
-      "url": "mongo-url",
-      "username": "username",
-      "password": "password",
+      "url": "mongodb://mongo-local:27017",
+      "username": "admin",
+      "password": "admin",
       "collections": {
         "users": "userscollection-name"
       }
@@ -33,7 +33,7 @@
       "health": "health-topic"
     },
     "groupIds": {
-      "healh": "health-group"
+      "health": "health-group"
     }
   }
 }
