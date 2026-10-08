@@ -57,10 +57,19 @@ try {
     recursive: true,
     // Never copy local install artifacts into the new project.
     // (node_modules exists in the repo when developing the CLI itself.)
-    filter: (src) =>
-      !src.endsWith(`${path.sep}node_modules`) &&
-      !src.includes(`${path.sep}node_modules${path.sep}`) &&
-      !src.endsWith(`${path.sep}logs`),
+    // NOTE: compare paths *relative* to boilerplatePath — the absolute
+    // install path itself contains ".../node_modules/<pkg>/..." when
+    // installed via npm/npx, so matching on the absolute path would
+    // exclude everything.
+    filter: (src) => {
+      const rel = path.relative(boilerplatePath, src);
+      // Keep the boilerplate root itself.
+      if (!rel) return true;
+      const parts = rel.split(path.sep);
+      if (parts.includes("node_modules")) return false;
+      if (parts.includes("logs")) return false;
+      return true;
+    },
   });
 
   // 3. Update package.json
